@@ -19,7 +19,7 @@ public class ViewFactory {
     private static final String APP_NAME = "ExactPro CMMS";
 
     private Stage primaryStage;
-    private AnchorPane addressSearchView;
+    private AnchorPane welcomeScreenView;
 
 
     private void createStage(FXMLLoader loader, Boolean isPrimaryStage) {
@@ -44,7 +44,7 @@ public class ViewFactory {
 
 
     private Image loadPdfIcon() {
-        return new Image(String.valueOf(this.getClass().getResource(FxmlPathUtils.imagesPathBuilder("chain-icon72"))));
+        return new Image(String.valueOf(this.getClass().getResource(FxmlPathUtils.imagesPathBuilder("exatidao_logo"))));
     }
 
     public <T> void showMessagePane(String fxmlPath, ModalView<T> modal, String title) {
@@ -78,18 +78,18 @@ public class ViewFactory {
     }
 
     public void showApp() {
-        FXMLLoader fxmlLoader = FxmlLoaderUtils.loadFxml("ConectarView");
+        FXMLLoader fxmlLoader = FxmlLoaderUtils.loadFxml("ExactProView");
         createStage(fxmlLoader, Boolean.TRUE);
     }
 
     public AnchorPane showAddressSearchView() {
-        if (this.addressSearchView == null) {
+        if (this.welcomeScreenView == null) {
             try {
-                this.addressSearchView = FxmlLoaderUtils.loadFxml("EnderecoView").load();
+                this.welcomeScreenView = FxmlLoaderUtils.loadFxml("WelcomeScreenView").load();
             } catch (IOException e) {
                 log.error(String.format("Fail: %s.showAddressSearchView() -> [%s]", ViewFactory.class.getSimpleName(), e.getMessage()), e);
             }
         }
-        return this.addressSearchView;
+        return this.welcomeScreenView;
     }
 }
