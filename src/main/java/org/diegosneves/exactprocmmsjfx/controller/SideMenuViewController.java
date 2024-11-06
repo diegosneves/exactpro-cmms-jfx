@@ -9,7 +9,7 @@ import org.diegosneves.exactprocmmsjfx.util.FxmlPathUtils;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class SideMenu implements Initializable {
+public class SideMenuViewController implements Initializable {
 
     @FXML
     public ImageView ivCompanyLogo;

@@ -11,6 +11,12 @@
     -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
 }
 
+.left_container Line {
+    -fx-stroke: #DDDDDD;
+    -fx-pref-width: 40;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);
+}
+
 .img_container {
     -fx-background-color: #0D4A71;
     -fx-background-radius: 15;
@@ -20,39 +26,20 @@
     -fx-effect: dropshadow(three-pass-box, #002661, 5, 0, 7, 3);
 }
 
-/*.left_container Text {*/
-/*    -fx-fill: #000000;*/
-/*    -fx-font-size: 1.1em;*/
-/*    -fx-font-weight: 700;*/
-/*    -fx-font-family: "Calibri Light";*/
-/*    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 3);*/
-/*}*/
 
-/*.left_container ImageView {*/
-/*    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 3);*/
-/*}*/
+.menu_container Button {
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 0.9em;
+    -fx-font-family: "Calibri Light";
+    -fx-font-weight: 700;
+    -fx-background-radius: 30;
+    -fx-pref-width: 170;
+    -fx-pref-height: 40;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);
+}
 
-/*.menu_container Button {*/
-/*    -fx-background-color: #FFFFFF;*/
-/*    -fx-font-size: 1.0em;*/
-/*    -fx-font-family: "Calibri Light";*/
-/*    -fx-font-weight: 700;*/
-/*    -fx-background-radius: 30;*/
-/*    -fx-pref-width: 120;*/
-/*    -fx-pref-height: 40;*/
-/*    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);*/
-/*}*/
+.menu_container Button:hover {
+    -fx-cursor: hand;
+}
 
-/*.menu_container Button:hover {*/
-/*    -fx-cursor: hand;*/
-/*}*/
 
-/*.menu_container_bt_address FontAwesomeIconView {*/
-/*    -fx-fill: #f61f32;*/
-/*}*/
-
-/*.left_container Line {*/
-/*    -fx-stroke: #DDDDDD;*/
-/*    -fx-pref-width: 40;*/
-/*    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);*/
-/*}*/
