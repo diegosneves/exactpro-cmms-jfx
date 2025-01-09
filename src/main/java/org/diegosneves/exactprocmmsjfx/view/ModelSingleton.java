@@ -1,9 +1,13 @@
 package org.diegosneves.exactprocmmsjfx.view;
 
+import lombok.Getter;
 
+@Getter
 public class ModelSingleton {
 
-    private static ModelSingleton instance;
+    private static final Object CLASS_LOCK = ModelSingleton.class;
+
+    private static volatile ModelSingleton instance;
     private final ViewFactory viewFactory;
 
     private ModelSingleton() {
@@ -12,17 +16,13 @@ public class ModelSingleton {
 
     public static ModelSingleton getInstance() {
         if (instance == null) {
-            synchronized (ModelSingleton.class) {
+            synchronized (CLASS_LOCK) {
                 if (instance == null) {
                     instance = new ModelSingleton();
                 }
             }
         }
         return instance;
-    }
-
-    public ViewFactory getViewFactory() {
-        return this.viewFactory;
     }
 
 }

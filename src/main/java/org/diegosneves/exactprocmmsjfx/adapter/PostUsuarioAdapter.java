@@ -21,7 +21,7 @@ public class PostUsuarioAdapter extends HttpAdapter {
             ResponseEntity<UsuarioApiResponse> response = this.restTemplateSimpleWebClient.getRestTemplate().postForEntity(builder.build().toUri(), usuario, UsuarioApiResponse.class);
             return response.getBody();
         } catch (RestClientException e) {
-            log.error(String.format("Fail: %s.postUsuario(Params...) -> [%s]", PostUsuarioAdapter.class.getSimpleName(), e.getMessage()), e);
+            log.error("Fail: {}.postUsuario(Params...) -> [{}]", PostUsuarioAdapter.class.getSimpleName(), e.getMessage(), e);
         }
         return null;
     }
