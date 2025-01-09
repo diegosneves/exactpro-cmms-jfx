@@ -33,7 +33,7 @@ public class EnvLoaderUtil {
                 }
             }
         } catch (IOException e) {
-            log.error(String.format("Fail: %s.loadEnv() [%s]", EnvLoaderUtil.class.getSimpleName(), e.getMessage()), e);
+            log.error("Fail: {}.loadEnv() [{}]", EnvLoaderUtil.class.getSimpleName(), e.getMessage(), e);
         }
     }
 
@@ -41,7 +41,7 @@ public class EnvLoaderUtil {
         try {
             newenv.put(key, value);
         } catch (Exception e) {
-            log.error(String.format("Fail: %s.setEnv(%s, %s)", EnvLoaderUtil.class.getSimpleName(), key, value), e);
+            log.error("Fail: {}.setEnv({}, {})", EnvLoaderUtil.class.getSimpleName(), key, value, e);
         }
     }
 
@@ -50,7 +50,7 @@ public class EnvLoaderUtil {
         try {
             return newenv.get(key);
         } catch (Exception e) {
-            log.error(String.format("Fail: %s.getEnv(%s)", EnvLoaderUtil.class.getSimpleName(), key), e);
+            log.error("Fail: {}.getEnv({})", EnvLoaderUtil.class.getSimpleName(), key, e);
         }
         return System.getenv(key);
     }
