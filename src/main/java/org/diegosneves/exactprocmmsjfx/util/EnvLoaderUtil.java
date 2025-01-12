@@ -47,12 +47,17 @@ public class EnvLoaderUtil {
 
     public static String getEnv(String key) {
         loadEnv();
+        String envValue = null;
         try {
-            return newenv.get(key);
+            envValue = newenv.get(key);
+            if (envValue == null) {
+                envValue = System.getenv(key);
+            }
+            return envValue;
         } catch (Exception e) {
             log.error("Fail: {}.getEnv({})", EnvLoaderUtil.class.getSimpleName(), key, e);
         }
-        return System.getenv(key);
+        return envValue;
     }
 
 }
