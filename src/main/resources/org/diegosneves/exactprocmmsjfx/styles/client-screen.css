@@ -1,0 +1,48 @@
+.main_container {
+    -fx-background-color: #EEEEEE;
+    -fx-alignment: center;
+    -fx-padding: 5 5 5 5;
+}
+
+.left_container {
+    /*-fx-background-color: #FFFFFE;*/
+    -fx-background-color: linear-gradient(to right, #FFFEFF, #EEEEEE);
+    -fx-background-radius: 10;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(two-pass-box, #AAAAAA, 5, 0, 0, 4);
+}
+
+.left_container TextField {
+    -fx-pref-height: 35;
+    -fx-background-color: #FFFEFF;
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(three-pass-box, #AAAAAA, 3, 0, 0, 3);
+}
+
+.left_container Button {
+    -fx-background-color: linear-gradient(to right, #FFFEFF, #EEEEEE);
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);
+    -fx-font-size: 1.5em;
+    -fx-font-family: "Calibri Light";
+    -fx-text-fill: #1e1f22;
+}
+
+.left_container Button:hover {
+    -fx-cursor: hand;
+}
+
+.left_container Line {
+    -fx-stroke: #DDDDDD;
+    -fx-effect: dropshadow(three-pass-box, #DDDDDD, 5, 0, 7, 7);
+}
+
+.left_container_save_btn FontAwesomeIconView {
+    -fx-fill: #1f7300;
+}
+
+.left_container_search_btn FontAwesomeIconView {
+    -fx-fill: #0e45d3;
+}
+
+

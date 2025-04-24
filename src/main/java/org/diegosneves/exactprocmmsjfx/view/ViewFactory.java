@@ -27,7 +27,7 @@ public class ViewFactory {
         try {
             scene = new Scene(loader.load());
         } catch (IOException e) {
-            log.error(String.format("Fail: %s.createStage(Params...) -> [%s]", ViewFactory.class.getSimpleName(), e.getMessage()), e);
+            log.error("Fail: {}.createStage(Params...) -> [{}]", ViewFactory.class.getSimpleName(), e.getMessage(), e);
         }
 
         Stage stage = new Stage();
@@ -55,7 +55,7 @@ public class ViewFactory {
         try {
             scene = new Scene(loader.load());
         } catch (IOException e) {
-            log.error(String.format("Fail: %s.showMessagePane(Params...) -> [%s]", ViewFactory.class.getSimpleName(), e.getMessage()), e);
+            log.error("Fail: {}.showMessagePane(Params...) -> [{}]", ViewFactory.class.getSimpleName(), e.getMessage(), e);
         }
 
         Stage stage = new Stage();
@@ -87,7 +87,7 @@ public class ViewFactory {
             try {
                 this.welcomeScreenView = FxmlLoaderUtils.loadFxml("WelcomeScreenView").load();
             } catch (IOException e) {
-                log.error(String.format("Fail: %s.showAddressSearchView() -> [%s]", ViewFactory.class.getSimpleName(), e.getMessage()), e);
+                log.error("Fail: {}.showAddressSearchView() -> [{}]", ViewFactory.class.getSimpleName(), e.getMessage(), e);
             }
         }
         return this.welcomeScreenView;

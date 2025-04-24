@@ -44,7 +44,7 @@ public class RetrieveAddressAdapter extends HttpAdapter {
                     .getForEntity(builder.toUriString(), AddressApiResponse.class);
             return response.getBody();
         } catch (RestClientException e) {
-            log.error(String.format("Fail: %s.retrieveAddress(Params...) -> [%s]", AddressApiResponse.class.getSimpleName(), e.getMessage()), e);
+            log.error("Fail: {}.retrieveAddress(Params...) -> [{}]", AddressApiResponse.class.getSimpleName(), e.getMessage(), e);
         }
         return null;
     }

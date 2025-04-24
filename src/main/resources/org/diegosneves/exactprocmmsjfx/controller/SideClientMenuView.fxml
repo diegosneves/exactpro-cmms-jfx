@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
@@ -8,10 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Line?>
 
-<VBox alignment="CENTER" prefHeight="850.0" prefWidth="200.0" spacing="20.0"
-      styleClass="menu_container" stylesheets="@../styles/side-menu.css"
-      xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.diegosneves.exactprocmmsjfx.controller.SideMenuViewController">
+<VBox alignment="CENTER" prefHeight="850.0" prefWidth="200.0" spacing="20.0" styleClass="menu_container" stylesheets="@../styles/side-menu.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.diegosneves.exactprocmmsjfx.controller.SideClientMenuViewController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
@@ -32,22 +30,34 @@
                     <Insets top="5.0" />
                 </VBox.margin>
             </Line>
-            <Button mnemonicParsing="false" text="Caldeira">
+            <Button mnemonicParsing="false" text="Cadastrar">
             <VBox.margin>
                <Insets top="10.0" />
-            </VBox.margin></Button>
-            <Button mnemonicParsing="false" text="Vasos de Pressão">
+            </VBox.margin>
+            <graphic>
+               <FontAwesomeIconView glyphName="USER_PLUS" size="20" />
+            </graphic></Button>
+            <Button mnemonicParsing="false" text="Editar">
             <VBox.margin>
                <Insets top="10.0" />
-            </VBox.margin></Button>
-            <Button mnemonicParsing="false" text="Tanques Metálicos">
+            </VBox.margin>
+            <graphic>
+               <FontAwesomeIconView glyphName="EDIT" size="20" />
+            </graphic></Button>
+            <Button mnemonicParsing="false" text="Listar">
             <VBox.margin>
                <Insets top="10.0" />
-            </VBox.margin></Button>
-            <Button mnemonicParsing="false" text="Tubulação de Vapor">
+            </VBox.margin>
+            <graphic>
+               <FontAwesomeIconView glyphName="SORT_AMOUNT_ASC" size="20" />
+            </graphic></Button>
+            <Button mnemonicParsing="false" text="Excluir">
             <VBox.margin>
                <Insets top="10.0" />
-            </VBox.margin></Button>
+            </VBox.margin>
+            <graphic>
+               <FontAwesomeIconView glyphName="ERASER" size="20" />
+            </graphic></Button>
         </VBox>
         <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="650.0">
 
@@ -55,10 +65,13 @@
             <VBox.margin>
                <Insets top="10.0" />
             </VBox.margin></Line>
-            <Button fx:id="btClient" mnemonicParsing="false" text="Clientes">
+            <Button mnemonicParsing="false" text="Voltar">
             <VBox.margin>
                <Insets top="10.0" />
-            </VBox.margin></Button>
+            </VBox.margin>
+            <graphic>
+               <FontAwesomeIconView glyphName="MAIL_REPLY" size="20" />
+            </graphic></Button>
         </VBox>
         <VBox.margin>
             <Insets left="10.0" />
